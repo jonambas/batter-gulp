@@ -1,0 +1,8 @@
+
+h2 {
+	text-transform: uppercase;
+	&:after {
+		content: "import _test.scss";
+		display: block;
+	}
+}

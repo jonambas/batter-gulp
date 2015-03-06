@@ -1,0 +1,31 @@
+{
+  "name": "batter-gulp",
+  "version": "1.0.0",
+  "description": "A Boilerplate",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "gitrepo"
+  },
+  "keywords": [
+    "keywords"
+  ],
+  "author": "Jon Ambas",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.2.2",
+    "gulp": "^3.8.11",
+    "gulp-compass": "^2.0.3",
+    "gulp-concat": "^2.5.2",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-minify-css": "^0.5.1",
+    "gulp-nunjucks-render": "^0.1.3",
+    "gulp-plumber": "^0.6.6",
+    "gulp-rename": "^1.2.0",
+    "gulp-ruby-sass": "^1.0.0-alpha.3",
+    "gulp-uglify": "^1.1.0"
+  }
+}
