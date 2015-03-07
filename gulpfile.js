@@ -50,7 +50,7 @@ gulp.task('sass', function() {
     .pipe(plumber())
     .pipe(autoprefixer())
     .pipe(gulp.dest('src/public/styles/css'))
-    .pipe(minifycss())
+    .pipe(minifycss({ keepSpecialComments: 0 }))
     .pipe(rename({suffix: '.min' }))
     .pipe(gulp.dest('dist/public/styles/'))
     .pipe(reload({stream: true}));
