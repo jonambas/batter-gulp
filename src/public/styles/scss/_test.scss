@@ -1,6 +1,8 @@
 
 h2 {
 	text-transform: uppercase;
+	transition: 0.3s;
+	opacity: 0.5;
 	&:after {
 		content: "import _test.scss";
 		display: block;

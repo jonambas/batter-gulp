@@ -1,5 +1,8 @@
 h2 {
   text-transform: uppercase;
+  -webkit-transition: 0.3s;
+          transition: 0.3s;
+  opacity: 0.5;
 }
 h2:after {
   content: "import _test.scss";

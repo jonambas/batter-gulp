@@ -4,7 +4,7 @@ var gulp 						= require('gulp'),
 		uglify 					= require('gulp-uglify'),
 		concat					= require('gulp-concat'),
 		sass 						= require('gulp-ruby-sass'),
-		compass 				= require('gulp-compass'),
+		autoprefixer 		= require('gulp-autoprefixer'),
 		minifycss       = require('gulp-minify-css'),
 		plumber 				= require('gulp-plumber'),
 		imagemin 				= require('gulp-imagemin'),
@@ -36,7 +36,6 @@ gulp.task('browser-sync', function() {
     });
 });
 
-//Uglifies
 gulp.task('scripts', function(){
 	gulp.src(src.js)
 		.pipe(plumber())
@@ -46,15 +45,10 @@ gulp.task('scripts', function(){
 });
 
 gulp.task('sass', function() {
-  //return sass(src.scss, { style: 'compressed', sourcemap: false })
-  return gulp.src('src/public/styles/scss/*.scss')
+  return sass(src.scss, { style: 'expanded', sourcemap: false })
   	.pipe(plumber())
-  	.pipe(compass({
-      config_file: 'src/config.rb',
-      css: 'src/public/styles/css' ,
-      sass: 'src/public/styles/scss',
-      style: 'expanded'
-    }))
+  	.pipe(autoprefixer())
+		.pipe(gulp.dest('src/public/styles/css'))
     .pipe(minifycss())
 		.pipe(rename({suffix: '.min' }))
     .pipe(gulp.dest('dist/public/styles/'))
@@ -70,11 +64,9 @@ gulp.task('image', function(){
 
 gulp.task('layout', function () {
   nunjucksRender.nunjucks.configure([src.tmp]);
-
   return gulp.src([src.tmp + '*.html'])
     .pipe(nunjucksRender())
     .pipe(gulp.dest('dist/'));
-
 });
 
 gulp.task('watch', function(){	

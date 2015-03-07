@@ -1,1 +1,1 @@
-h2{text-transform:uppercase}h2:after{content:"import _test.scss";display:block}html{background:#f5f5f5;font-family:sans-serif;padding:3em}
+h2{text-transform:uppercase;-webkit-transition:.3s;transition:.3s;opacity:.5}h2:after{content:"import _test.scss";display:block}html{background:#f5f5f5;font-family:sans-serif;padding:3em}
