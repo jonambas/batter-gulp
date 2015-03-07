@@ -584,7 +584,7 @@ html, body {
 }
 
 .grid {
-  margin-top: 32px;
+  margin: 32px 0;
 }
 .grid div {
   height: 32px;
