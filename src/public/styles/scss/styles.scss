@@ -38,6 +38,6 @@ html, body {
     height: base(2);
     margin-bottom: $gutter-width;
     background-clip: content-box;
-    background-color: darken($color-background, 6);  
+    background-color: darken($color-background, 12);  
   }
 }
