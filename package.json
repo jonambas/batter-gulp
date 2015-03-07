@@ -2,6 +2,8 @@
   "name": "batter-gulp",
   "version": "0.0.1",
   "description": "Boilerplate with Gulp, Sass, Compass, Nunjucks",
+  "author": "Jon Ambas [ambasp@gmail.com, @jonshungry]",
+  "license": "MIT",
   "main": "gulpfile.js",
   "scripts": {
     "test": ""
@@ -15,8 +17,6 @@
     "sass",
     "boilerplate"
   ],
-  "author": "Jon Ambas <ambasp@gmail.com>",
-  "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.2.2",
     "gulp": "^3.8.11",
