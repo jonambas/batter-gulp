@@ -1,9 +1,9 @@
-#Batter for Gulp
+##batter-gulp
 
-<pre><code>$ git clone https://github.com/pambas/batter-gulp.git
-$ cd batter-gulp
-$ npm install
-$ gulp</code></pre>
+<pre><code>git clone https://github.com/pambas/batter-gulp.git
+cd batter-gulp
+npm install
+gulp</code></pre>
 
 ## License
 
