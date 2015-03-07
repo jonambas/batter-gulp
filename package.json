@@ -1,7 +1,7 @@
 {
   "name": "batter-gulp",
   "version": "0.0.1",
-  "description": "Boilerplate with Gulp, Sass, Compass, Nunjucks",
+  "description": "Boilerplate with Gulp, Sass, Nunjucks",
   "author": "Jon Ambas [ambasp@gmail.com, @jonshungry]",
   "license": "MIT",
   "main": "gulpfile.js",
