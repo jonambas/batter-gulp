@@ -1,6 +1,6 @@
 ##batter-gulp
 
-<pre><code>git clone https://github.com/pambas/batter-gulp.git
+<pre><code>git clone https://github.com/jonambas/batter-gulp.git
 cd batter-gulp
 npm install
 gulp</code></pre>
