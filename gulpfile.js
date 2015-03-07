@@ -14,11 +14,12 @@ var gulp 						= require('gulp'),
 		reload 					= browserSync.reload;
 
 var src = {
-	scss: 'src/public/styles/scss/',
-	css:  'src/public/styles/*.css',
-	js: 	'src/public/scripts/**/*.js',
-	img: 	'src/public/images/**/*',
-	tmp: 	'src/templates/'
+	scss:    'src/public/styles/scss/',
+	css:     'src/public/styles/*.css',
+	js: 	   'src/public/scripts/**/*.js',
+	img: 	   'src/public/images/**/*',
+	tmp: 	   'src/templates/',
+  fonts:   'src/public/fonts/**/*.{ttf,woff,eot,svg}'
 }
 
 gulp.task('browser-sync', function() {
@@ -69,6 +70,11 @@ gulp.task('layout', function () {
     .pipe(gulp.dest('dist/'));
 });
 
+gulp.task('fonts', function() {
+   gulp.src(src.fonts)
+   .pipe(gulp.dest('dist/public/fonts'));
+});
+
 gulp.task('watch', function(){	
 	gulp.watch(src.scss + '**/*.scss', ['sass']);
 	gulp.watch(src.js, 								 ['scripts', reload]);
@@ -76,4 +82,4 @@ gulp.task('watch', function(){
 });
 
 
-gulp.task('default', ['scripts', 'sass', 'layout', 'image', 'watch', 'browser-sync']);
+gulp.task('default', ['scripts', 'fonts', 'sass', 'layout', 'image', 'watch', 'browser-sync']);
