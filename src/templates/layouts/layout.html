@@ -1,19 +1,23 @@
-<html>
-	<head>
-		<title>{% block title %}Batter for Gulp{% endblock %}</title>
-		<link rel="stylesheet" href="public/styles/styles.min.css">
-	</head>
-	<body>
-		
-		{% include "includes/navigation.html" %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Batter - Layout{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<h1>Layout Block</h1>
-		
-	  {% block content %}{% endblock %}
-		
+    <link rel="stylesheet" href="public/styles/styles.min.css">
+    
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+      <link rel="stylesheet" href="public/styles/ie.min.css">
+    <![endif]-->
 
-
-	  <script type="text/javascript" src="public/scripts/scripts.min.js"></script>
-	</body>	
+  </head>
+  <body>
+    
+    {% block content %}{% endblock %}
+    
+		<script type="text/javascript" src="public/scripts/scripts.min.js"></script>
+  </body>
 </html>
-

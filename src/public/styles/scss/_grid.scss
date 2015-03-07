@@ -1,0 +1,61 @@
+// Namespaces
+$grid-namespace: "grid";
+$grid-column-namespace: "col";
+
+// Map of the column widths you want
+$col-widths: (20, 25, 33, 40, 50, 60, 66, 75, 80, 100);
+
+// Gutter width
+$gutter-width: 20px;
+
+// Examples of outputted classes
+// .col-20                  - a column 20% wide
+// .col-50 .col--push-25    - a column 50% wide with 25% margin left
+// .col-80 .col--centered   - a column 80% wide that is centered
+
+// Wrap your columns in a <div class="$grid-namespace">
+
+.#{$grid-namespace} {
+
+  margin-left: -$gutter-width;
+  text-align: left;
+
+  %col {
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: -4px;
+    padding-left: $gutter-width;
+    min-height: 1px;
+    vertical-align: top;
+  }
+
+  @each $width in $col-widths {
+
+    .#{$grid-column-namespace}-#{$width} {
+      @extend %col;
+      @if $width == 33 {
+        width: percentage(1/3);
+      } @else if $width == 66 {
+        width: percentage(2/3);
+      } @else {
+        width: $width + 0%;
+      }  
+    }
+
+    .#{$grid-column-namespace}--push-#{$width} { 
+      @if $width == 33 {
+        margin-left: percentage(1/3);
+      } @else if $width == 66 {
+        margin-left: percentage(2/3);
+      } @else {
+        margin-left: $width + 0%;
+      }  
+    }
+  }
+
+  .#{$grid-column-namespace}--centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
