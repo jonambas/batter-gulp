@@ -1,3 +1,5 @@
+"use strict";
+
 var gulp 						= require('gulp'),
 		uglify 					= require('gulp-uglify'),
 		concat					= require('gulp-concat'),
@@ -19,7 +21,6 @@ var src = {
 	tmp: 	'src/templates/'
 }
 
-// Static server
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
@@ -30,7 +31,8 @@ gulp.task('browser-sync', function() {
             forms: true,
             scroll: false
         },
-        notify: false
+        notify: false,
+        open: "external"
     });
 });
 
@@ -43,7 +45,6 @@ gulp.task('scripts', function(){
 		.pipe(gulp.dest('dist/public/scripts/'));
 });
 
-//Uglifies
 gulp.task('sass', function() {
   //return sass(src.scss, { style: 'compressed', sourcemap: false })
   return gulp.src('src/public/styles/scss/*.scss')
@@ -60,7 +61,6 @@ gulp.task('sass', function() {
     .pipe(reload({stream: true}));
 });
 
-//Image 
 gulp.task('image', function(){
 	gulp.src(src.img)
 		.pipe(plumber())
@@ -68,7 +68,6 @@ gulp.task('image', function(){
 		.pipe(gulp.dest('dist/public/images/'));
 });
 
-//Nunjucks
 gulp.task('layout', function () {
   nunjucksRender.nunjucks.configure([src.tmp]);
 
@@ -78,7 +77,6 @@ gulp.task('layout', function () {
 
 });
 
-//Watch Task
 gulp.task('watch', function(){	
 	gulp.watch(src.scss + '**/*.scss', ['sass']);
 	gulp.watch(src.js, 								 ['scripts', reload]);

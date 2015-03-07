@@ -1,19 +1,21 @@
 {
   "name": "batter-gulp",
-  "version": "1.0.0",
-  "description": "A Boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate with Gulp, Sass, Compass, Nunjucks",
   "main": "gulpfile.js",
   "scripts": {
     "test": ""
   },
   "repository": {
     "type": "git",
-    "url": "gitrepo"
+    "url": "https://github.com/pambas/batter-gulp.git"
   },
   "keywords": [
-    "keywords"
+    "gulp",
+    "sass",
+    "boilerplate"
   ],
-  "author": "Jon Ambas",
+  "author": "Jon Ambas <ambasp@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.2.2",
