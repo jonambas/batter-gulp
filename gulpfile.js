@@ -60,7 +60,7 @@ gulp.task('sass', function() {
         })(err);
     })
     .pipe(autoprefixer())
-    .pipe(gulp.dest('src/public/styles/css'))
+    .pipe(gulp.dest('src/public/styles'))
     .pipe(minifycss({ keepSpecialComments: 0 }))
     .pipe(rename({suffix: '.min' }))
     .pipe(gulp.dest('./dist/public/styles/'))
