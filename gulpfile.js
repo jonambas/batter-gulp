@@ -23,19 +23,23 @@ var src = {
   fonts:   './src/public/fonts/**/*.{ttf,woff,eot,svg}'
 }
 
-gulp.task('browser-sync', function() {
+gulp.task('serve', ['sass'], function() {
     browserSync({
         server: {
             baseDir: "dist/"
         },
         ghostMode: {
-            clicks: true,
-            forms: true,
+            clicks: false,
+            forms: false,
             scroll: false
         },
         notify: false,
         open: "external"
     });
+
+    gulp.watch(src.scss + '**/*.scss', ['sass']);
+    gulp.watch('./dist/*.html').on('change', reload);
+    gulp.watch('./dist/public/scripts/*.js').on('change', reload);
 });
 
 gulp.task('scripts', function(){
@@ -87,10 +91,9 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('watch', function(){  
-  gulp.watch(src.scss + '**/*.scss', ['sass']);
   gulp.watch(src.js,                 ['scripts', reload]);
   gulp.watch(src.tmp  + '**/*.html', ['layout', reload]);
 });
 
 
-gulp.task('default', ['scripts', 'fonts', 'sass', 'layout', 'image', 'watch', 'browser-sync']);
+gulp.task('default', ['scripts', 'fonts', 'layout', 'image', 'watch', 'serve']);
