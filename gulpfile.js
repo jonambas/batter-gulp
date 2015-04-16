@@ -40,6 +40,7 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch(src.scss + '**/*.scss', ['sass']);
     gulp.watch('./dist/*.html').on('change', reload);
     gulp.watch('./dist/public/scripts/*.js').on('change', reload);
+    
 });
 
 gulp.task('scripts', function(){
@@ -91,8 +92,8 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('watch', function(){  
-  gulp.watch(src.js,                 ['scripts', reload]);
-  gulp.watch(src.tmp  + '**/*.html', ['layout', reload]);
+  gulp.watch(src.js,                 ['scripts']);
+  gulp.watch(src.tmp  + '**/*.html', ['layout']);
 });
 
 
