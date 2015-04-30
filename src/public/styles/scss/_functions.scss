@@ -20,6 +20,10 @@
   @return $result;
 }
 
+@function color($c) {
+  @return map-get($color-map, $c);
+}
+
 @mixin font($family, $size, $weight) {
   font:{
     family: $family;

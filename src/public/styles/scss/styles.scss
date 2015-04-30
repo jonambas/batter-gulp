@@ -7,7 +7,7 @@
 @import "typography";
 
 html {
-  background-color: $color-background;
+  background-color: color(white);
 }
 
 .container {
@@ -38,6 +38,6 @@ html, body {
     height: base(2);
     margin-bottom: $gutter-width;
     background-clip: content-box;
-    background-color: darken($color-background, 12);  
+    background-color: darken(color(white), 12);  
   }
 }

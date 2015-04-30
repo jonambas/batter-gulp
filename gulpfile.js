@@ -55,8 +55,7 @@ gulp.task('sass', function() {
   return sass(src.scss, { 
     style: 'expanded', 
     sourcemap: false 
-  })
-    /*.pipe(plumber()) plumber doesn't work with gulp-ruby-sass */
+    })
     .on('error', function(err) {
         notify.onError({
             title: 'Sass Error!',

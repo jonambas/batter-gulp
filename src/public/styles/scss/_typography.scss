@@ -3,7 +3,7 @@
 $open-sans: 'Open Sans', sans-serif;
 
 html {
-  color: $color-text-base;
+  color: color(text);
   font-size: $base-font-size + 0px;
 }
 
@@ -21,8 +21,8 @@ body {
 %header {
   margin-top: 0;
   margin-bottom: base(1);
-  text-rendering: optimizeLegibility;
-  color:  $color-text-header;
+  //text-rendering: optimizeLegibility;
+  color:  color(text);
   line-height: 1.1em;
   @include font($open-sans, 16, 300);
   &::selection{
