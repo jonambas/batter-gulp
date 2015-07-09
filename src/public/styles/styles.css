@@ -417,7 +417,7 @@ pre, table, fieldset, hr {
   margin-left: -20px;
   text-align: left;
 }
-.grid .col-20, .grid .col-25, .grid .col-33, .grid .col-40, .grid .col-50, .grid .col-60, .grid .col-66, .grid .col-75, .grid .col-80, .grid .col-100 {
+.grid .col-1, .grid .col-2, .grid .col-3, .grid .col-4, .grid .col-5, .grid .col-6, .grid .col-7, .grid .col-8, .grid .col-9, .grid .col-10, .grid .col-11, .grid .col-12 {
   box-sizing: border-box;
   display: inline-block;
   margin-right: -4px;
@@ -425,64 +425,76 @@ pre, table, fieldset, hr {
   min-height: 1px;
   vertical-align: top;
 }
-.grid .col-20 {
-  width: 20%;
+.grid .col-1 {
+  width: 8.33333%;
 }
-.grid .col--push-20 {
-  margin-left: 20%;
+.grid .col--push-1 {
+  margin-left: 8.33333%;
 }
-.grid .col-25 {
+.grid .col-2 {
+  width: 16.66667%;
+}
+.grid .col--push-2 {
+  margin-left: 16.66667%;
+}
+.grid .col-3 {
   width: 25%;
 }
-.grid .col--push-25 {
+.grid .col--push-3 {
   margin-left: 25%;
 }
-.grid .col-33 {
+.grid .col-4 {
   width: 33.33333%;
 }
-.grid .col--push-33 {
+.grid .col--push-4 {
   margin-left: 33.33333%;
 }
-.grid .col-40 {
-  width: 40%;
+.grid .col-5 {
+  width: 41.66667%;
 }
-.grid .col--push-40 {
-  margin-left: 40%;
+.grid .col--push-5 {
+  margin-left: 41.66667%;
 }
-.grid .col-50 {
+.grid .col-6 {
   width: 50%;
 }
-.grid .col--push-50 {
+.grid .col--push-6 {
   margin-left: 50%;
 }
-.grid .col-60 {
-  width: 60%;
+.grid .col-7 {
+  width: 58.33333%;
 }
-.grid .col--push-60 {
-  margin-left: 60%;
+.grid .col--push-7 {
+  margin-left: 58.33333%;
 }
-.grid .col-66 {
+.grid .col-8 {
   width: 66.66667%;
 }
-.grid .col--push-66 {
+.grid .col--push-8 {
   margin-left: 66.66667%;
 }
-.grid .col-75 {
+.grid .col-9 {
   width: 75%;
 }
-.grid .col--push-75 {
+.grid .col--push-9 {
   margin-left: 75%;
 }
-.grid .col-80 {
-  width: 80%;
+.grid .col-10 {
+  width: 83.33333%;
 }
-.grid .col--push-80 {
-  margin-left: 80%;
+.grid .col--push-10 {
+  margin-left: 83.33333%;
 }
-.grid .col-100 {
+.grid .col-11 {
+  width: 91.66667%;
+}
+.grid .col--push-11 {
+  margin-left: 91.66667%;
+}
+.grid .col-12 {
   width: 100%;
 }
-.grid .col--push-100 {
+.grid .col--push-12 {
   margin-left: 100%;
 }
 .grid .col--centered {
