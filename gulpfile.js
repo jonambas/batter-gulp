@@ -19,8 +19,7 @@ var src = {
   css:     './src/public/styles/*.css',
   js:      './src/public/scripts/**/*.js',
   img:     './src/public/images/**/*',
-  tmp:     './src/templates/',
-  fonts:   './src/public/fonts/**/*.{ttf,woff,eot,svg}'
+  tmp:     './src/templates/'
 }
 
 gulp.task('serve', ['sass'], function() {
@@ -40,7 +39,6 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch(src.scss + '**/*.scss', ['sass']);
     gulp.watch('./dist/*.html').on('change', reload);
     gulp.watch('./dist/public/scripts/*.js').on('change', reload);
-    
 });
 
 gulp.task('scripts', function(){
@@ -85,15 +83,9 @@ gulp.task('layout', function () {
     .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('fonts', function() {
-   gulp.src(src.fonts)
-   .pipe(gulp.dest('./dist/public/fonts'));
-});
-
 gulp.task('watch', function(){  
   gulp.watch(src.js,                 ['scripts']);
   gulp.watch(src.tmp  + '**/*.html', ['layout']);
 });
 
-
-gulp.task('default', ['scripts', 'fonts', 'layout', 'image', 'watch', 'serve']);
+gulp.task('default', ['scripts', 'layout', 'image', 'watch', 'serve']);
