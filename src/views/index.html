@@ -1,28 +1,9 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Batter — Index </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends "layouts/main.html" %}
 
-    <link rel="stylesheet" href="public/css/styles.min.css">
-    
-    <!--[if lt IE 9]>
-      <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
-      </script>
-      <link rel="stylesheet" href="public/styles/ie.min.css">
-    <![endif]-->
-
-  </head>
-  <body>
-    
-    
+{% block title %}Batter — Index {% endblock %}
+{% block content %}
   
-  <nav>
-  <div class="container">
-
-  </div>
-</nav>
+  {% include "includes/navigation.html" %}
   
   <div class="vertical-align--table">
     <div class="vertical-align--table-cell">
@@ -63,8 +44,4 @@
     </div>
   </div>
   
-
-    
-    <script type="text/javascript" src="public/js/bundle.js"></script>
-  </body>
-</html>
+{% endblock %}
